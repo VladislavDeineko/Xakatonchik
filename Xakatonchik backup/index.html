@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KobrinAM</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />  
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo"><a href="#"><img class="logo-img" src="img/logo.svg" alt="logo"></a></div>
+                <div class="realTime">
+                    <span id="time_now">Дата и время</span>
+                    <script src="js/timer.js"></script>
+                </div>
+                <div class="user_info">
+                    <div class="user_info-logo"><img src="img/user.svg" alt="user_info-logo"></div>
+                    <div class="user_info-block">
+                        <div class="user_info-block-text">
+                            <div class="block-text-top">
+                                <span id ="user_name">User</span>
+                                <span id ="user_sample">Stable 3</span>
+                            </div>
+                            <div class="block-text-bottom">
+                                <a href="" class="text-bottom">Top manager</a>
+                            </div>
+                        </div>
+                        <div class="info-block-images">
+                            <div class="bookmark"><a href=""><img src="img/bookmark.svg" alt=""></a></div>
+                            <div id="triangle-black"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="invite">
+                    <div class="invite-inv">
+                        <span>Пригласить</span>
+                    </div>
+                    <div id="triangle-white"></div>
+                </div>
+                <div class="last_log">
+                    <div class="log-text">Las log</div>
+                    <div class="log-date">01.06.2023 14:00</div>
+                    <div id="triangle-white"></div>
+                </div>
+                <div class="lang"><span>ru/by/en</span></div>
+                <div class="help"><a href="#"><img src="img/help.svg" alt=""></a></div>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <secttion class="hero">
+            <div class="container hero__container">
+                <h1>
+                    Планирование
+                </h1>
+                <div class="btn__container">
+                    <div class="hero__container_btn">
+                        <a href="#">
+                            <span>Этот месяц</span>
+                        </a>
+                    </div>
+                    <div class="hero__container_btn">
+                        <a href="#">
+                            <span>Этот год</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="calendar">
+                    <div id="calPeriod">
+                        <input id="calBack" type="button" value="&lt;">
+                        <select id="calMonth"></select>
+                        <input type="number" id="calYear">
+                        <input id="calNext" type="button" value="&gt;">
+                      </div>
+                      
+                      <!-- (B) CALENDAR -->
+                      <div id="calWrap"></div>
+                      
+                      <!-- (C) EVENT FORM -->
+                      <dialog id="calForm"><form method="dialog">
+                        <div id="evtClose">X</div>
+                        <h2>CALENDAR EVENT</h2>
+                        <label>Date</label>
+                        <input type="text" id="evtDate" readonly>
+                        <label>Details</label>
+                        <textarea id="evtTxt" required></textarea>
+                       
+                        <input id="evtDel" type="button" value="Delete">
+                        <input id="evtSave" type="submit" value="Save">
+                      </form></dialog>
+                </div>
+            </div>
+        </secttion>
+    </main>
+</body>
+<script src="js/script.js"></script>
+<script src="js/index.js"></script>
+</html>
